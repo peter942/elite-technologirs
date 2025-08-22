@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elite Technologies - Home</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(-45deg, #059e0a, #044b07, #0dbb2c, #037c18);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+header {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+header h1 {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 10px 18px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: white;
+  color: #059e0a;
+  transform: scale(1.05);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+
+    .hero {
+      background: linear-gradient(to right, #059e0a, #044b07);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+    }
+    /* Book a Service button animation */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: white;
+  color: #059e0a;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Play bounce once, then pulse forever */
+  animation: bounceIn 1s ease-out, pulseGlow 1.8s infinite ease-in-out 1s;
+}
+
+/* Bounce-in effect */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Pulse & glow effect */
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+}
+
+.btn:hover {
+  background: #d1ffd3;
+  transform: scale(1.1);
+}
+
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: white;
+      color: #059e0a;
+      padding: 12px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #d1ffd3;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 50px 20px;
+      background: white;
+    }
+   .scrolling-image-banner {
+  overflow: hidden;
+  white-space: nowrap;
+  background: #fff;
+  padding: 15px 0;
+  border-top: 3px solid #059e0a;
+  border-bottom: 3px solid #059e0a;
+}
+
+.scrolling-image-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollImages 60s linear infinite;
+}
+.scrolling-image-track:hover {
+  animation-play-state: paused;
+}
+
+.scrolling-image-track img {
+  height: 80px;
+  margin: 0 20px;
+  vertical-align: middle;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+@keyframes scrollImages {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+    .card {
+      width: 300px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.3s; }
+    .card:nth-child(3) { animation-delay: 0.5s; }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-body h3 {
+      color: #059e0a;
+      margin-bottom: 10px;
+    }
+
+    .button-bar {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .design-btn {
+      padding: 15px 30px;
+      background-color: #059e0a;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .design-btn:hover {
+      background-color: #047c08;
+    }
+
+    .web-section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      color: #333;
+    }
+
+    .web-section h2 {
+      color: #059e0a;
+      margin-bottom: 30px;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .web-card, .gcard {
+      background: #f8f8f8;
+      padding: 20px;
+      width: 280px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      text-align: center;
+    }
+
+    .web-card:hover, .gcard:hover {
+      transform: scale(1.05);
+    }
+
+    .web-card h3, .gcard h3 {
+      color: #044b07;
+      margin-bottom: 10px;
+    }
+
+    .book-btn {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #059e0a;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .book-btn:hover {
+      background-color: #047c08;
+    }
+
+    .graphic-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+   .scrolling-text-banner {
+  overflow: hidden;
+  background-color: #044b07;
+  border-top: 3px solid #0dbb2c;
+  border-bottom: 3px solid #0dbb2c;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  white-space: nowrap;
+  position: relative;
+}
+
+.scrolling-text-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollText 50s linear infinite;
+}
+
+.scrolling-text-track span {
+  display: inline-block;
+  padding-right: 100px; /* Space between repeats */
+}
+
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+    footer {
+      text-align: center;
+      background: #222;
+      color: white;
+      padding: 20px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Floating Container */
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  text-align: center;
+}
+
+/* Tooltip */
+.tooltip {
+  background: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+  right: 0;
+}
+
+/* Show Tooltip on Hover */
+.whatsapp-container:hover .tooltip {
+  opacity: 1;
+}
+
+/* WhatsApp Button */
+.whatsapp-float {
+  display: inline-block;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 12px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Hover Zoom */
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* Blinker Effect */
+.blinker {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+  border: 2px solid white;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+footer {
+      background: #25D366;
+      color: white;
+      padding: 40px 20px;
+      margin-top: 40px;
+    }
+
+    footer h3 {
+      margin-bottom: 12px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    footer a:hover {
+      text-decoration: none;
+    }
+
+    footer .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin-right: 12px;
+    }
+
+    .social-icons img {
+      vertical-align: middle;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.3);
+      padding-top: 15px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      nav a {
+        display: inline-block;
+        margin: 6px 5px;
+      }
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div id="tsparticles" style="position: fixed; top:0; left:0; width: 100%; height: 100%; z-index: -1;"></div>
+
+<header>
+  <h1>
+    <a href="home.html" style="color: white; text-decoration: none;">Elite Technologies</a>
+  </h1>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="booking.html">Book Now</a>
+  </nav>
+</header>
+
+
+  <section class="hero">
+    <h1>We Build Modern Websites & Creative Designs</h1>
+    <p>Elite Technologies delivers professional web design and graphics tailored for your business growth.</p>
+    <a href="booking.html" class="btn">Book a Service</a>
+  </section>
+<!-- Seamless Scrolling Image Banner -->
+<div class="scrolling-image-banner">
+  <div class="scrolling-image-track">
+    <img src="li.jpg" alt="Banner 1" />
+    <img src="ps.jpg" alt="Banner 2" />
+    <img src="Fast.jpg" alt="Banner 3" />
+    <img src="Concepts.jpg" alt="Banner 4" />
+    <img src="Ui.jpg" alt="Banner 5" />
+
+    <!-- Duplicate set for seamless loop -->
+    <img src="li.jpg" alt="Banner 1" />
+    <img src="ps.jpg" alt="Banner 2" />
+    <img src="Fast.jpg" alt="Banner 3" />
+    <img src="Concepts.jpg" alt="Banner 4" />
+    <img src="Ui.jpg" alt="Banner 5" />
+  </div>
+</div>
+
+
+
+<!-- Feature Cards -->
+<section class="features">
+  ...
+</section>
+  <section class="features">
+    <!-- Card 1 -->
+    <a href="web-design-gallery.html" class="card-link">
+      <div class="card">
+        <img src="ET.jpg" alt="Website Design" />
+        <div class="card-body">
+          <h3>Website Design</h3>
+          <p>We design responsive, fast, and custom websites that represent your brand online.</p>
+
+        </div>
+      </div>
+    </a>
+
+    <!-- Card 2 -->
+    <a href="graphic-design-gallery.html" class="card-link">
+      <div class="card">
+        <img src="gd.jpg" alt="Graphic Design" />
+        <div class="card-body">
+          <h3>Graphic Design</h3>
+          <p>Logos, posters, banners, flyers, certificates, and social media posts for your business.</p>
+        </div>
+      </div>
+    </a>
+
+    <!-- Card 3 -->
+    <a href="support_gallery.html" class="card-link">
+      <div class="card">
+        <img src="o.jpeg" alt="24/7 Support" />
+        <div class="card-body">
+          <h3>24/7 Support</h3>
+          <p>Our team is available around the clock to support your business growth.</p>
+        </div>
+      </div>
+    </a>
+  </section>
+  
+  <video autoplay muted loop id="bg-video">
+  <source src="background.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+  <!-- Design Button Group -->
+  <div class="button-bar">
+    <button class="design-btn" onclick="toggleWebDesign()">Website Design</button>
+    <button class="design-btn" onclick="toggleGraphic()">Graphic Design</button>
+  </div>
+
+  <!-- Web Design Section -->
+  <section id="webDesignSection" class="web-section" style="display: none;">
+    <h2>Our Website Design Services</h2>
+    <p style="margin-bottom: 25px;">
+      We specialize in building <strong>modern, fast, and mobile-responsive websites</strong> that reflect your brand’s
+      identity and improve user experience. Whether you’re a small startup, a growing company, or a large enterprise,
+      our web design packages are tailored to meet your goals.
+    </p>
+    <div class="card-container">
+      <div class="web-card">
+        <h3>Basic Website</h3>
+        <p>Includes 3–5 pages, mobile-friendly design, and contact form.</p>
+        <p><em>Perfect for startups, personal portfolios, and small businesses.</em></p>
+        <strong>Price: KES 15,000</strong><br><br>
+        <a href="booking.html" class="book-btn">Book Now</a>
+      </div>
+
+      <div class="web-card">
+        <h3>Business Website</h3>
+        <p>Up to 10 pages, contact forms, service showcase, gallery, and blog section.</p>
+        <p><em>Ideal for established businesses looking to attract and convert more clients online.</em></p>
+        <strong>Price: KES 25,000</strong><br><br>
+        <a href="booking.html" class="book-btn">Book Now</a>
+      </div>
+
+      <div class="web-card">
+        <h3>E-commerce Website</h3>
+        <p>Fully functional online shop with product management, cart, checkout & secure payments.</p>
+        <p><em>Best for shops, boutiques, supermarkets, and service providers selling online.</em></p>
+        <strong>Price: KES 45,000</strong><br><br>
+        <a href="booking.html" class="book-btn">Book Now</a>
+      </div>
+
+      <div class="web-card">
+        <h3>Custom Web Solutions</h3>
+        <p>Web apps, booking platforms, learning systems, and tailored solutions for businesses.</p>
+        <p><em>For organizations that require advanced, custom-made web platforms.</em></p>
+        <strong>Contact for Quote</strong><br><br>
+        <a href="booking.html" class="book-btn">Request Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Graphic Design Section -->
+  <section id="graphicDesignSection" class="web-section" style="display: none;">
+    <h2>Our Graphic Design Services</h2>
+    <p style="margin-bottom: 25px;">
+      At Elite Technologies, we believe <strong>good design is good business</strong>. We create professional,
+      eye-catching graphics that give your brand the competitive edge it needs. Our designs are modern, unique, and
+      tailored for both digital and print media.
+    </p>
+    <div class="graphic-cards">
+      <div class="gcard">
+        <h3>Logo Design</h3>
+        <p>Custom-made logos that reflect your brand’s identity and vision.</p>
+        <strong>Price: KES 2,000</strong>
+        <a href="booking.html" class="book-btn">Book Now</a>
+      </div>
+
+      <div class="gcard">
+        <h3>Business Card Design</h3>
+        <p>Clean and professional cards to leave a lasting impression.</p>
+        <strong>Price: KES 1,000</strong>
+        <a href="booking.html" class="book-btn">Book Now</a>
+      </div>
+
+      <div class="gcard">
+        <h3>Flyers & Posters</h3>
+        <p>Vibrant designs for promotions, marketing campaigns, and events.</p>
+        <strong>Price: KES 1,500</strong>
+        <a href="booking.html" class="book-btn">Book Now</a>
+      </div>
+
+      <div class="gcard">
+        <h3>Certificate Design</h3>
+        <p>Professional certificates for awards, training, and events.</p>
+        <strong>Price: KES 800</strong>
+        <a href="booking.html" class="book-btn">Book Now</a>
+      </div>
+
+      <div class="gcard">
+        <h3>Brand Identity Packages</h3>
+        <p>Includes logo, business card, letterhead, and social media branding.</p>
+        <strong>Price: From KES 5,000</strong>
+        <a href="booking.html" class="book-btn">Book Now</a>
+      </div>
+
+      <div class="gcard">
+        <h3>Social Media Kits</h3>
+        <p>Engaging posts, covers, and ads designed to boost your online presence.</p>
+        <strong>Price: From KES 2,500</strong>
+        <a href="booking.html" class="book-btn">Book Now</a>
+      </div>
+    </div>
+  </section>
+  <!-- Why Choose Us Section -->
+  <section class="web-section" style="margin-top:40px;">
+    <h2>Why Choose Elite Technologies?</h2>
+    <p style="margin-bottom:30px;">
+      We don’t just build websites or design graphics — we help you <strong>grow your brand and business</strong>.
+      Here’s why our clients trust us:
+    </p>
+    <div class="card-container">
+      <div class="web-card" style="animation: fadeInUp 1s;">
+        <img src="https://img.icons8.com/color/96/lightning-bolt.png" alt="Fast Delivery" style="width:70px; margin-bottom:15px;">
+        <h3>Fast Delivery</h3>
+        <p>Get your project delivered on time without compromising on quality.</p>
+      </div>
+
+      <div class="web-card" style="animation: fadeInUp 1.3s;">
+        <img src="https://img.icons8.com/color/96/handshake.png" alt="Affordable Pricing" style="width:70px; margin-bottom:15px;">
+        <h3>Affordable Pricing</h3>
+        <p>We offer competitive packages that fit startups, SMEs, and large businesses.</p>
+      </div>
+
+      <div class="web-card" style="animation: fadeInUp 1.6s;">
+        <img src="https://img.icons8.com/color/96/verified-badge.png" alt="Professional Work" style="width:70px; margin-bottom:15px;">
+        <h3>Professional Work</h3>
+        <p>Our team delivers modern, creative, and professional results every time.</p>
+      </div>
+
+      <div class="web-card" style="animation: fadeInUp 1.9s;">
+        <img src="https://img.icons8.com/color/96/customer-support.png" alt="Support" style="width:70px; margin-bottom:15px;">
+        <h3>24/7 Support</h3>
+        <p>We are always available to answer your questions and offer assistance.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Seamless Scrolling Text Banner -->
+<div class="scrolling-text-banner">
+  <div class="scrolling-text-track">
+    <span>Welcome to Elite Technologies – We Offer Modern Web and Graphic Design Services! Book Now & Grow Your Business Online! Reach us via +254 115659819</span>
+    <span>Welcome to Elite Technologies – We Offer Modern Web and Graphic Design Services! Book Now & Grow Your Business Online! Reach us via +254 115659819</span>
+  </div>
+</div>
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>Contact Us</h3>
+        <p><strong>Phone:</strong> <a href="tel:+254115659819">+254 115659819</a></p>
+        <p><strong>Email:</strong> <a href="mailto:pitamuri02@gmail.com">pitamuri02@gmail.com</a></p>
+      </div>
+      <div>
+        <h3>Location</h3>
+        <p>Elite Technologies</p>
+        <p>Murang’a, Kenya</p>
+      </div>
+      <div>
+        <h3>Connect With Us</h3>
+        <div class="social-icons">
+          <a href="https://wa.me/254115659819" target="_blank"><img src="https://img.icons8.com/color/36/whatsapp--v1.png" alt="WhatsApp"></a>
+          <a href="https://facebook.com" target="_blank"><img src="https://img.icons8.com/color/36/facebook-new.png" alt="Facebook"></a>
+          <a href="https://instagram.com" target="_blank"><img src="https://img.icons8.com/fluency/36/instagram-new.png" alt="Instagram"></a>
+          <a href="https://x.com" target="_blank"><img src="https://img.icons8.com/ios-filled/36/ffffff/twitterx--v1.png" style="background:#000; padding:5px; border-radius:50%;" alt="Twitter/X"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Elite Technologies. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Toggle JS -->
+  <script>
+    function toggleWebDesign() {
+      const section = document.getElementById("webDesignSection");
+      section.style.display = (section.style.display === "none") ? "block" : "none";
+    }
+
+    function toggleGraphic() {
+      const section = document.getElementById("graphicDesignSection");
+      section.style.display = (section.style.display === "none") ? "block" : "none";
+    }
+  </script>
+
+  <!-- Background Particle Animation -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.3.3/tsparticles.bundle.min.js"></script>
+  <script>
+    tsParticles.load("tsparticles", {
+      background: { color: "#000" },
+      particles: {
+        number: { value: 80 },
+        size: { value: 3 },
+        move: { speed: 1 },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#00ff00",
+          opacity: 0.4,
+          width: 1
+        },
+        color: { value: "#00ff00" }
+      }
+    });
+  </script>
+ <!-- Floating WhatsApp Icon with Tooltip and Chat Widget -->
+<div class="whatsapp-container">
+  <div class="tooltip">Chat with us on WhatsApp</div>
+  <a href="https://wa.me/254115659819" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+    <span class="blinker"></span>
+  </a>
+</div>
+
+</body>
+</html>
